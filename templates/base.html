@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
     <!-- Main Css -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/login-form.css' %}" />
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <!-- Animate CSS -->
@@ -23,6 +24,8 @@
     <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}" />
     <!-- Flaticon CSS -->
     <link rel="stylesheet" href="{% static 'fonts/flaticon.css' %}" />
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
     <!-- Slick Caousel CSS -->
     <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
     <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
@@ -49,7 +52,7 @@
     <div id="wrapper" class="wrapper">
       <!-- Header Area Start Here -->
       <header id="site-header" class="header-one">
-        <div class="header-main header-sticky">
+        <div class="header-main header-sticky bg-success">
           <div class="container-fluid">
             <div class="mob-menu-open toggle-menu">
               <span class="bar"></span>
@@ -63,7 +66,7 @@
                   <a href="index.html" class="main-logo"
                     ><img src="{% static 'img/logo.png' %}" alt="Site Logo"
                   /></a>
-                  <a href="index.html" class="sticky-logo"
+                  <a href="#" class="sticky-logo"
                     ><img src="{% static 'img/sticky-logo.png' %}" alt="Site Logo"
                   /></a>
                 </div>
@@ -72,11 +75,11 @@
                 <nav class="site-nav">
                   <ul class="site-menu">
                     <li>
-                      <a href="{% url 'home' %}">Home</a>
+                      <a href="{% url 'home' %}" class="text-white">Home</a>
                     </li>
-                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="about-us.html" class="text-white">About</a></li>
                     <li>
-                      <a href="#">Categories</a>
+                      <a href="#" class="text-white">Categories</a>
                       <ul class="dropdown-menu-col-1">
                         <li>
                           <a href="listing-grid-view1.html"
@@ -122,7 +125,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="#">Events</a>
+                      <a href="#" class="text-white">Events</a>
                       <ul class="dropdown-menu-col-1">
                         <li>
                           <a href="event.html">Event</a>
@@ -134,9 +137,9 @@
                     </li>
 
                     <li>
-                      <a href="#">Blog</a>
+                      <a href="#" class="text-white">Blog</a>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="text-white">Contact</a></li>
                   </ul>
                 </nav>
               </div>
@@ -146,17 +149,22 @@
                 <div class="nav-action-elements">
                   <ul>
                     <li>
-                      <button
-                        type="button"
-                        class="login-btn"
-                        data-toggle="modal"
-                        data-target="#myModal"
+                      {%if request.user.is_authenticated%}
+                      <a href="{% url 'logout' %}"
+                        class="login-btn text-white"
                       >
-                        <i class="flaticon-profile"></i>Login
-                      </button>
+                        <i class="flaticon-profile"></i>Logout
+                      </a>
+                      {% else %}
+                      <a href="{% url 'login' %}"
+                      class="login-btn text-white"
+                    >
+                      <i class="flaticon-profile"></i>Login
+                    </a>
+                    {% endif%}
                     </li>
                     <li>
-                      <a href="add-listing.html" class="ghost-btn"
+                      <a href="{% url 'signup' %}" class="ghost-btn text-white"
                         ><i class="fa fa-plus"></i>ADD LISTING</a
                       >
                     </li>
@@ -168,68 +176,6 @@
         </div>
       </header>
       <!-- Header Area End Here -->
-      <!-- Main Banner Area Start Here -->
-      <section
-        class="main-banner-wrap-layout1 bg-common overlay-dark-30 bg--gradient-top-30 bg-success"
-        data-bg-image="{% static 'img/figure/site-main-figure1.jpg' %}"
-        style="height: 50px;"
-      >
-        <div class="container">
-          <div class="main-banner-box-layout1">
-            <p class="item-sub-title">
-              Discover &amp; connect with great places and people around the world
-            </p>
-            <h1 class="item-title">Let’s Discover Your Need</h1>
-            <form id="category-search-form" class="category-search-form">
-              <ul class="form-items">
-                <li>
-                  <div class="input-group stylish-input-group">
-                    <input
-                      type="text"
-                      placeholder="What are you looking for?"
-                      class="form-control"
-                      name="website"
-                      id="form-website"
-                      data-error="Search text required"
-                      required
-                    />
-                    <span class="input-group-addon">
-                      <button type="submit">
-                        <i class="flaticon-search"></i>
-                      </button>
-                    </span>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="input-group stylish-input-group">
-                    <input
-                      type="email"
-                      placeholder="All Categories"
-                      class="form-control"
-                      name="email"
-                      id="form-email"
-                      data-error="Category name is required"
-                      required
-                    />
-                    <span class="input-group-addon">
-                      <button type="submit">
-                        <i class="flaticon-placeholder"></i>
-                      </button>
-                    </span>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-group mb-0">
-                    <button type="submit" class="item-btn">Search</button>
-                  </div>
-                </li>
-              </ul>
-            </form>
-          </div>
-        </div>
-      </section>
       <!-- Main Banner Area End Here -->
       {% block main_content %}
         
@@ -452,6 +398,8 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Plugins Js -->
     <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Select 2 Js -->
+    <script src="{% static 'js/select2.full.min.js' %}"></script>
     <!-- Imagesloaded Js -->
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <!-- Isotope js -->

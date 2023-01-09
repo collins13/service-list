@@ -1,0 +1,794 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<!-- Listing Area Start Here -->
+{% block main_content %}
+<!-- My Account Area Start Here -->
+<section
+  class="my-account-wrap padding-top-10 padding-bottom-10"
+  style="margin-top: 10px"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-12">
+        <ul class="nav nav-tabs my-account-nav">
+          <li>
+            <a
+              class="active"
+              href="#dashboard"
+              data-toggle="tab"
+              aria-expanded="false"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#listings" data-toggle="tab" aria-expanded="false"
+              >My Listings</a
+            >
+          </li>
+          <li>
+            <a href="#favourites" data-toggle="tab" aria-expanded="false"
+              >Favourites</a
+            >
+          </li>
+          <li>
+            <a href="#account-details" data-toggle="tab" aria-expanded="false"
+              >Account Details</a
+            >
+          </li>
+          <li>
+            <a href="#logout" data-toggle="tab" aria-expanded="false">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-12">
+        <div class="my-account-content tab-content">
+          <div class="tab-pane active show" id="dashboard">
+            <div class="dashboard">
+              <div class="media box-padding media-none--xs">
+                <img src="{% static 'img/my-account/1.png' %}" alt="My About" />
+                <div class="media-body">
+                  <h2>{{user.first_name}} {{user.last_name}}</h2>
+                  <h3><span>Email :</span> {{ user.email }}</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="listings">
+            <div class="listing-box-list">
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-25.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-26.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-27.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-28.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-29.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-30.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="item-img bg--gradient-50">
+                  <div class="item-status status-open active">Open</div>
+                  <img
+                    src="{% static 'img/listing/listing-31.jpg' %}"
+                    alt="Listing"
+                    class="img-fluid list-view-img"
+                  />
+                  <ul class="item-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>
+                      <span>8.4<span> / 10</span></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title">
+                    <a href="#">Westfield Restaurant</a>
+                  </h3>
+                  <ul class="contact-info">
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                      Brooklyn
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i>19th August, 2018
+                    </li>
+                  </ul>
+                  <ul class="meta-item">
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Edit</a>
+                    </li>
+                    <li class="item-btn">
+                      <a href="#" class="btn-fill">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="pagination-layout1">
+                <li>
+                  <a href="#"><i class="flaticon-back"></i></a>
+                </li>
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <a href="#"><i class="flaticon-right-arrow"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="favourites">
+            <div class="favourites">
+              <div class="listing-box-list">
+                <div class="product-box">
+                  <div class="item-img bg--gradient-50">
+                    <div class="item-status status-open active">Open</div>
+                    <img
+                      src="{% static 'img/listing/listing-25.jpg' %}"
+                      alt="Listing"
+                      class="img-fluid list-view-img"
+                    />
+                    <ul class="item-rating">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li>
+                        <span>8.4<span> / 10</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-content">
+                    <h3 class="item-title">
+                      <a href="#">Westfield Restaurant</a>
+                    </h3>
+                    <ul class="contact-info">
+                      <li>
+                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                        Brooklyn
+                      </li>
+                      <li>
+                        <i class="far fa-calendar-alt"></i>19th August, 2018
+                      </li>
+                    </ul>
+                    <ul class="meta-item">
+                      <li class="item-btn">
+                        <a href="#" class="btn-fill">View</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box">
+                  <div class="item-img bg--gradient-50">
+                    <div class="item-status status-open active">Open</div>
+                    <img
+                      src="{% static 'img/listing/listing-26.jpg' %}"
+                      alt="Listing"
+                      class="img-fluid list-view-img"
+                    />
+                    <ul class="item-rating">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li>
+                        <span>8.4<span> / 10</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-content">
+                    <h3 class="item-title">
+                      <a href="#">Westfield Restaurant</a>
+                    </h3>
+                    <ul class="contact-info">
+                      <li>
+                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                        Brooklyn
+                      </li>
+                      <li>
+                        <i class="far fa-calendar-alt"></i>19th August, 2018
+                      </li>
+                    </ul>
+                    <ul class="meta-item">
+                      <li class="item-btn">
+                        <a href="#" class="btn-fill">View</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box">
+                  <div class="item-img bg--gradient-50">
+                    <div class="item-status status-open active">Open</div>
+                    <img
+                      src="{% static 'img/listing/listing-27.jpg' %}"
+                      alt="Listing"
+                      class="img-fluid list-view-img"
+                    />
+                    <ul class="item-rating">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li>
+                        <span>8.4<span> / 10</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-content">
+                    <h3 class="item-title">
+                      <a href="#">Westfield Restaurant</a>
+                    </h3>
+                    <ul class="contact-info">
+                      <li>
+                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                        Brooklyn
+                      </li>
+                      <li>
+                        <i class="far fa-calendar-alt"></i>19th August, 2018
+                      </li>
+                    </ul>
+                    <ul class="meta-item">
+                      <li class="item-btn">
+                        <a href="#" class="btn-fill">View</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box">
+                  <div class="item-img bg--gradient-50">
+                    <div class="item-status status-open active">Open</div>
+                    <img
+                      src="{% static 'img/listing/listing-28.jpg' %}"
+                      alt="Listing"
+                      class="img-fluid list-view-img"
+                    />
+                    <ul class="item-rating">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li>
+                        <span>8.4<span> / 10</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-content">
+                    <h3 class="item-title">
+                      <a href="#">Westfield Restaurant</a>
+                    </h3>
+                    <ul class="contact-info">
+                      <li>
+                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
+                        Brooklyn
+                      </li>
+                      <li>
+                        <i class="far fa-calendar-alt"></i>19th August, 2018
+                      </li>
+                    </ul>
+                    <ul class="meta-item">
+                      <li class="item-btn">
+                        <a href="#" class="btn-fill">View</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="account-details">
+            <div class="account-details listing-form box-padding">
+              <div class="inner-box">
+                <h3 class="inner-item-heading2">Basic Information</h3>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Name</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                        value="{{user.first_name}} {{user.last_name}}"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>E-mail</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                        value="{{user.email}}"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Phone</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                        value="{{user.phone_no}}"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Website</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Designation</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Company</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>facebook (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>twitter (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Linked (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Skype (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Google plus (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Pinterest (Optional)</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-box">
+                <h3 class="inner-item-heading2">Location</h3>
+                <div class="row">
+                  <div class="col-12">
+                    <label>Address</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>City</label>
+                    <div class="form-group">
+                      <select class="select2" name="filter-by">
+                        <option value="0">Select</option>
+                        <option value="1">Dhaka</option>
+                        <option value="2">Austin</option>
+                        <option value="3">Boston</option>
+                        <option value="4">Chandler</option>
+                        <option value="5">Charlotte</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>State</label>
+                    <div class="form-group">
+                      <select class="select2" name="filter-by">
+                        <option value="0">Select</option>
+                        <option value="1">Dhaka</option>
+                        <option value="2">Texas</option>
+                        <option value="3">Massachusetts</option>
+                        <option value="4">Arizona</option>
+                        <option value="5">North Carolina</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Country</label>
+                    <div class="form-group">
+                      <select class="select2" name="filter-by">
+                        <option value="0">Select</option>
+                        <option value="1">Bangladesh</option>
+                        <option value="2">Australia</option>
+                        <option value="3">Japan</option>
+                        <option value="4">Poland</option>
+                        <option value="5">England</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Zip Code</label>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="logout">
+            <div class="logout box-padding">
+              <h2>Login</h2>
+              <form class="login-form">
+                <input
+                  class="main-input-box"
+                  type="text"
+                  placeholder="User Name"
+                />
+                <input
+                  class="main-input-box"
+                  type="password"
+                  placeholder="Password"
+                />
+                <div class="inline-box mb-5 mt-4">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox1" type="checkbox" />
+                    <label for="checkbox1">Remember Me</label>
+                  </div>
+                  <label class="lost-password"
+                    ><a href="#">Lost your password?</a></label
+                  >
+                </div>
+                <div class="inline-box mb-5 mt-4">
+                  <button class="btn-fill" type="submit" value="Login">
+                    Login
+                  </button>
+                  <a href="#" class="btn-register"
+                    ><i class="fa fa-user"></i>Register Here!</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- My Account Area End Here -->
+{% endblock %} {% block scripts %} {{ block.super }}
+<script type="text/javascript">
+  $(document).ready(function () {});
+</script>
+{% endblock %}
