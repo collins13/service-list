@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+t{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
 <!-- Listing Area Start Here -->
 {% block main_content %}
 <!-- My Account Area Start Here -->
@@ -6,6 +6,7 @@
   class="my-account-wrap padding-top-10 padding-bottom-10"
   style="margin-top: 10px"
 >
+  {% include "patials/_messages.html" %}
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-12">
@@ -104,258 +105,6 @@
                   </ul>
                 </div>
               </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-26.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-27.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-28.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-29.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-30.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product-box">
-                <div class="item-img bg--gradient-50">
-                  <div class="item-status status-open active">Open</div>
-                  <img
-                    src="{% static 'img/listing/listing-31.jpg' %}"
-                    alt="Listing"
-                    class="img-fluid list-view-img"
-                  />
-                  <ul class="item-rating">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li>
-                      <span>8.4<span> / 10</span></span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-content">
-                  <h3 class="item-title">
-                    <a href="#">Westfield Restaurant</a>
-                  </h3>
-                  <ul class="contact-info">
-                    <li>
-                      <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                      Brooklyn
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i>19th August, 2018
-                    </li>
-                  </ul>
-                  <ul class="meta-item">
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Edit</a>
-                    </li>
-                    <li class="item-btn">
-                      <a href="#" class="btn-fill">Delete</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
               <ul class="pagination-layout1">
                 <li>
                   <a href="#"><i class="flaticon-back"></i></a>
@@ -383,123 +132,6 @@
                     <div class="item-status status-open active">Open</div>
                     <img
                       src="{% static 'img/listing/listing-25.jpg' %}"
-                      alt="Listing"
-                      class="img-fluid list-view-img"
-                    />
-                    <ul class="item-rating">
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li>
-                        <span>8.4<span> / 10</span></span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="item-content">
-                    <h3 class="item-title">
-                      <a href="#">Westfield Restaurant</a>
-                    </h3>
-                    <ul class="contact-info">
-                      <li>
-                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                        Brooklyn
-                      </li>
-                      <li>
-                        <i class="far fa-calendar-alt"></i>19th August, 2018
-                      </li>
-                    </ul>
-                    <ul class="meta-item">
-                      <li class="item-btn">
-                        <a href="#" class="btn-fill">View</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="product-box">
-                  <div class="item-img bg--gradient-50">
-                    <div class="item-status status-open active">Open</div>
-                    <img
-                      src="{% static 'img/listing/listing-26.jpg' %}"
-                      alt="Listing"
-                      class="img-fluid list-view-img"
-                    />
-                    <ul class="item-rating">
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li>
-                        <span>8.4<span> / 10</span></span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="item-content">
-                    <h3 class="item-title">
-                      <a href="#">Westfield Restaurant</a>
-                    </h3>
-                    <ul class="contact-info">
-                      <li>
-                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                        Brooklyn
-                      </li>
-                      <li>
-                        <i class="far fa-calendar-alt"></i>19th August, 2018
-                      </li>
-                    </ul>
-                    <ul class="meta-item">
-                      <li class="item-btn">
-                        <a href="#" class="btn-fill">View</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="product-box">
-                  <div class="item-img bg--gradient-50">
-                    <div class="item-status status-open active">Open</div>
-                    <img
-                      src="{% static 'img/listing/listing-27.jpg' %}"
-                      alt="Listing"
-                      class="img-fluid list-view-img"
-                    />
-                    <ul class="item-rating">
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li>
-                        <span>8.4<span> / 10</span></span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="item-content">
-                    <h3 class="item-title">
-                      <a href="#">Westfield Restaurant</a>
-                    </h3>
-                    <ul class="contact-info">
-                      <li>
-                        <i class="fa fa-map-marker-alt"></i>59 Street, Mk tower,
-                        Brooklyn
-                      </li>
-                      <li>
-                        <i class="far fa-calendar-alt"></i>19th August, 2018
-                      </li>
-                    </ul>
-                    <ul class="meta-item">
-                      <li class="item-btn">
-                        <a href="#" class="btn-fill">View</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="product-box">
-                  <div class="item-img bg--gradient-50">
-                    <div class="item-status status-open active">Open</div>
-                    <img
-                      src="{% static 'img/listing/listing-28.jpg' %}"
                       alt="Listing"
                       class="img-fluid list-view-img"
                     />
@@ -590,17 +222,6 @@
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <label>Designation</label>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        placeholder=""
-                        class="form-control"
-                        name="name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
                     <label>Company</label>
                     <div class="form-group">
                       <input
@@ -645,36 +266,13 @@
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <label>Skype (Optional)</label>
+                    <label>Description</label>
                     <div class="form-group">
-                      <input
-                        type="text"
-                        placeholder=""
+                      <textarea
                         class="form-control"
-                        name="name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label>Google plus (Optional)</label>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        placeholder=""
-                        class="form-control"
-                        name="name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label>Pinterest (Optional)</label>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        placeholder=""
-                        class="form-control"
-                        name="name"
-                      />
+                        placeholder="description"
+                        id="description"
+                      ></textarea>
                     </div>
                   </div>
                 </div>
@@ -730,17 +328,6 @@
                         <option value="4">Poland</option>
                         <option value="5">England</option>
                       </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label>Zip Code</label>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        placeholder=""
-                        class="form-control"
-                        name="name"
-                      />
                     </div>
                   </div>
                 </div>

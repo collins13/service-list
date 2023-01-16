@@ -150,11 +150,20 @@
                   <ul>
                     <li>
                       {%if request.user.is_authenticated%}
-                      <a href="{% url 'logout' %}"
+                      <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle ghost-btn text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {{ request.user.first_name  }} {{ request.user.last_name }}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                      </div>
+                      {% comment %} <a href="{% url 'logout' %}"
                         class="login-btn text-white"
                       >
                         <i class="flaticon-profile"></i>Logout
-                      </a>
+                      </a> {% endcomment %}
                       {% else %}
                       <a href="{% url 'login' %}"
                       class="login-btn text-white"
