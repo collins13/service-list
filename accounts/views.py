@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from service_listing.decorators import verified_user_required
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
-
 # Create your views here.
 
 
@@ -38,7 +37,7 @@ def signup(request):
 
 
 @login_required
-@verified_user_required
+# @verified_user_required
 def profile(request):
     user = request.user
     context = {'user': user}
