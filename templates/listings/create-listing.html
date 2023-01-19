@@ -1,0 +1,770 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<!-- Listing Area Start Here -->
+{% block main_content %}
+<!-- Inne Page Banner Area Start Here -->
+<section
+  class="inner-page-banner bg-common inner-page-top-margin overlay-dark-40"
+  data-bg-image="img/figure/inner-page-banner1.jpg"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumbs-area">
+          <h1>Submit Listing</h1>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>Add Listing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Inne Page Banner Area End Here -->
+<!-- Add Listing Area Start Here -->
+<section class="padding-top-6 padding-bottom-7 bg--accent">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <form class="listing-form">
+          <div class="inner-box">
+            <h3 class="inner-item-heading2">General Information</h3>
+            <div class="row">
+              <div class="col-12">
+                <label>Listng Title</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Category</label>
+                <div class="form-group">
+                  <select class="select2" name="filter-by">
+                    <option value="0">Sort By</option>
+                    <option value="1">Newest</option>
+                    <option value="2">Top Sell</option>
+                    <option value="3">Top Rated</option>
+                    <option value="4">Price High</option>
+                    <option value="5">Low Price</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Keywords</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <label>Description</label>
+                <div class="form-group">
+                  <textarea
+                    placeholder=""
+                    class="textarea form-control"
+                    name="message"
+                    rows="7"
+                    cols="20"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-box">
+            <h3 class="inner-item-heading2">Add Location</h3>
+            <div class="row">
+              <div class="col-4">
+                <label>Address</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>City</label>
+                <div class="form-group">
+                  <select class="select2" name="filter-by">
+                    <option value="0">Select</option>
+                    <option value="1">Dhaka</option>
+                    <option value="2">Austin</option>
+                    <option value="3">Boston</option>
+                    <option value="4">Chandler</option>
+                    <option value="5">Charlotte</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>State</label>
+                <div class="form-group">
+                  <select class="select2" name="filter-by">
+                    <option value="0">Select</option>
+                    <option value="1">Dhaka</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Massachusetts</option>
+                    <option value="4">Arizona</option>
+                    <option value="5">North Carolina</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Country</label>
+                <div class="form-group">
+                  <select class="select2" name="filter-by">
+                    <option value="0">Select</option>
+                    <option value="1">Bangladesh</option>
+                    <option value="2">Australia</option>
+                    <option value="3">Japan</option>
+                    <option value="4">Poland</option>
+                    <option value="5">England</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-box">
+            <h3 class="inner-item-heading2">Details Information</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <label>Name</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>E-mail</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Phone</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Website</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Designation</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Company</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>facebook (Optional)</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>twitter (Optional)</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Linked (Optional)</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-box menu-list-wrapper">
+            <h3 class="inner-item-heading2">Gallery Images</h3>
+            <label>Click here or drope files to upload</label>
+            <div class="row menu-list">
+              <div class="col-sm-4 col-12 menu-item">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload1"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload2"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload3"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload4"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload5"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload6"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload7"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload8"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-12 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="img-upload9"
+                    class="form-control img-upload-box"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="loadmore" data-sm="1" data-md="2" data-lg="3">
+              <a href="#" class="btn-add-more"
+                ><i class="fa fa-plus"></i>ADD MORE</a
+              >
+            </div>
+          </div>
+          <div class="inner-box">
+            <h3 class="inner-item-heading2">Amenities</h3>
+            <div class="row">
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox1" type="checkbox" />
+                  <label for="checkbox1">Alarm system</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" type="checkbox" />
+                  <label for="checkbox2">Alarm system</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox3" type="checkbox" />
+                  <label for="checkbox3">Onsite management</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox4" type="checkbox" />
+                  <label for="checkbox4">Depanneur in building</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox5" type="checkbox" />
+                  <label for="checkbox5">Onsite management</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox6" type="checkbox" />
+                  <label for="checkbox6">Janitor</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox7" type="checkbox" />
+                  <label for="checkbox7">Onsite management</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox8" type="checkbox" />
+                  <label for="checkbox8">Depanneur in building</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox9" type="checkbox" />
+                  <label for="checkbox9">Alarm system</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox10" type="checkbox" />
+                  <label for="checkbox10">Janitor</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox11" type="checkbox" />
+                  <label for="checkbox11">Alarm system</label>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox12" type="checkbox" />
+                  <label for="checkbox12">Depanneur in building</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-box menu-list-wrapper opening-hours-wrap">
+            <h3 class="inner-item-heading2">Opening Hours</h3>
+            <div class="row menu-list">
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Type Day ..."
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 menu-item hidden">
+                <div class="form-group">
+                  <div class="stylish-input-group">
+                    <input
+                      type="text"
+                      placeholder="00.00"
+                      class="form-control"
+                      name="name"
+                    />
+                    <select class="select2" name="filter-by">
+                      <option value="0">am</option>
+                      <option value="1">pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="loadmore" data-sm="3" data-md="3" data-lg="3">
+              <a href="#" class="btn-add-more"
+                ><i class="fa fa-plus"></i>ADD MORE DAY</a
+              >
+            </div>
+          </div>
+          <div class="inner-box">
+            <h3 class="inner-item-heading2">Pricing</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Title"
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="$00.00"
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="$00.00"
+                    class="form-control"
+                    name="name"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-box">
+            <button type="submit" class="btn-upload">UPLOAD NOW</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Add Listing Area End Here -->
+{% endblock %} {% block scripts %} {{ block.super }}
+<script type="text/javascript">
+  $(document).ready(function () {});
+</script>
+{% endblock %}
